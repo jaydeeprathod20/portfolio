@@ -26,11 +26,11 @@ export function CaseStudiesSection({ caseStudies }: CaseStudiesSectionProps) {
 
   return (
     <Section id="case-studies">
-      <SectionHeader
-        label="Case Studies"
-        title="Real Systems Built for Real Businesses"
-        description="Production-grade applications across logistics, manufacturing ERP, procurement, and healthcare — built with React, Node.js, and MongoDB."
-      />
+    <SectionHeader
+  label="Case Studies"
+  title="Projects That Solved Real Business Problems"
+  description="From ERP and logistics platforms to healthcare marketplaces and workflow automation systems, these projects demonstrate my experience building scalable business applications."
+/>
 
       <div className="mb-8 flex flex-wrap gap-2">
         {caseStudies.map((study, index) => (

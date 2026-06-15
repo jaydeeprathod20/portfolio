@@ -16,11 +16,11 @@ export function ServicesSection() {
 
   return (
     <Section id="services" className="bg-muted/30">
-      <SectionHeader
-        label="Services"
-        title="End-to-End Software Development Services"
-        description="From SaaS products to enterprise ERP systems — comprehensive development services tailored to your business."
-      />
+    <SectionHeader
+  label="Technical Expertise"
+  title="Technologies & Solutions I Build"
+  description="3+ years of experience building React applications, enterprise ERP systems, logistics platforms, admin dashboards, and full-stack MERN solutions."
+/>
 
       <div className="grid gap-4 lg:grid-cols-2">
         {services.map((service) => {

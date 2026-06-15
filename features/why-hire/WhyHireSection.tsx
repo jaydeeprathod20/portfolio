@@ -11,11 +11,11 @@ import { whyHireReasons } from "@/data/process";
 export function WhyHireSection() {
   return (
     <Section id="why-hire">
-      <SectionHeader
-        label="Why Work With Me"
-        title="Why Clients Hire Me"
-        description="More than code — a partner focused on delivering business value through thoughtful engineering."
-      />
+    <SectionHeader
+  label="Professional Strengths"
+  title="What Sets Me Apart"
+  description="Experience building enterprise applications, solving business challenges, and delivering scalable solutions with modern web technologies."
+/>
 
       <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {whyHireReasons.map((reason) => (

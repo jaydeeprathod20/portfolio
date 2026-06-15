@@ -1,99 +1,98 @@
 import {
-  Target,
   Building,
-  Layers,
-  Rocket,
+  Code2,
   Gauge,
-  Shield,
-} from "lucide-react";
-import type { WhyHireReason, ProcessStep } from "@/types";
+  GraduationCap,
+  Lightbulb,
+  Rocket,
+} from "lucide-react";import type { WhyHireReason, ProcessStep } from "@/types";
 
 export const whyHireReasons: WhyHireReason[] = [
   {
-    id: "business-focused",
-    title: "Business-Focused Development",
-    description:
-      "Every technical decision is tied to a business outcome — faster operations, reduced costs, or improved customer experience.",
-    icon: Target,
-  },
-  {
     id: "enterprise-experience",
-    title: "Enterprise Experience",
+    title: "Enterprise Application Experience",
     description:
-      "Proven track record building ERP systems, logistics platforms, and SaaS products for real businesses.",
+      "Hands-on experience developing ERP systems, logistics platforms, procurement workflows, invoicing systems, and operational dashboards used by real businesses.",
     icon: Building,
   },
   {
-    id: "scalable-architecture",
-    title: "Scalable Architecture",
+    id: "react-mern-expertise",
+    title: "React & MERN Expertise",
     description:
-      "Applications built with clean architecture patterns that grow with your business without costly rewrites.",
-    icon: Layers,
+      "Experienced in developing modern web applications using React.js, Next.js, Redux, Node.js, Express.js, and MongoDB, with a focus on scalable architecture, performance, and maintainable code.",
+    icon: Code2,
   },
   {
-    id: "end-to-end",
-    title: "End-to-End Ownership",
+    id: "problem-solving",
+    title: "Business Problem Solver",
     description:
-      "From discovery to deployment and support — one consultant who understands your entire product lifecycle.",
+      "Focused on understanding business requirements and translating them into efficient, user-friendly software solutions that create measurable impact.",
+    icon: Lightbulb,
+  },
+  {
+    id: "ownership",
+    title: "Ownership & Accountability",
+    description:
+      "Experienced in taking features from requirement gathering to deployment, testing, optimization, and continuous improvements.",
     icon: Rocket,
   },
   {
     id: "performance",
-    title: "Performance Optimization",
+    title: "Performance-Focused Development",
     description:
-      "Applications optimized for speed, Core Web Vitals, and efficient resource usage from the start.",
+      "Committed to building fast, maintainable applications with reusable components, clean architecture, and optimized user experiences.",
     icon: Gauge,
   },
   {
-    id: "maintainability",
-    title: "Long-Term Maintainability",
+    id: "continuous-learning",
+    title: "Continuous Learning Mindset",
     description:
-      "Clean code, documentation, and modular architecture that makes future updates straightforward.",
-    icon: Shield,
+      "Actively expanding expertise in MERN stack development, backend technologies, system design, and modern software engineering practices.",
+    icon: GraduationCap,
   },
 ];
 
 export const processSteps: ProcessStep[] = [
   {
     step: 1,
-    title: "Discovery",
+    title: "Requirement Analysis",
     description:
-      "Understand your business goals, users, existing systems, and success metrics through structured consultation.",
+      "Understand business goals, user needs, and technical requirements before implementation.",
   },
   {
     step: 2,
-    title: "Planning",
+    title: "Solution Planning",
     description:
-      "Define scope, architecture, timeline, and milestones with a clear roadmap and technical specifications.",
+      "Design application structure, data flow, APIs, and technical architecture for scalability.",
   },
   {
     step: 3,
-    title: "Design",
+    title: "UI Development",
     description:
-      "Create wireframes and UI designs focused on usability, conversion, and your brand identity.",
+      "Build responsive and intuitive user interfaces using React, Next.js, and modern frontend practices.",
   },
   {
     step: 4,
-    title: "Development",
+    title: "Backend Integration",
     description:
-      "Build iteratively with regular demos, transparent progress updates, and quality-focused development.",
+      "Connect APIs, databases, authentication systems, and third-party services to create complete solutions.",
   },
   {
     step: 5,
-    title: "Testing",
+    title: "Testing & Optimization",
     description:
-      "Comprehensive QA across devices, browsers, and edge cases to ensure production readiness.",
+      "Validate functionality, fix edge cases, and optimize performance for a seamless user experience.",
   },
   {
     step: 6,
     title: "Deployment",
     description:
-      "Launch to production with CI/CD, monitoring, and performance validation.",
+      "Deploy applications with proper configuration, monitoring, and production readiness checks.",
   },
   {
     step: 7,
-    title: "Support",
+    title: "Continuous Improvement",
     description:
-      "Post-launch support, maintenance, and iterative improvements to keep your product running smoothly.",
+      "Refine features, improve performance, and enhance applications based on feedback and evolving requirements.",
   },
 ];

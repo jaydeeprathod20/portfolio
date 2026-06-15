@@ -11,11 +11,11 @@ import { technologyGroups } from "@/data/technologies";
 export function TechnologiesSection() {
   return (
     <Section id="technologies" className="bg-muted/30">
-      <SectionHeader
-        label="Technology"
-        title="Modern Stack for Scalable Applications"
-        description="Proven technologies chosen for performance, maintainability, and long-term scalability."
-      />
+    <SectionHeader
+  label="Technical Skills"
+  title="Modern Technologies & Development Tools"
+  description="Technologies I've used to build enterprise applications, logistics platforms, admin dashboards, and full-stack web solutions."
+/>
 
       <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {technologyGroups.map((group) => (

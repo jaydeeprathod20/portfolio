@@ -74,6 +74,14 @@ export interface ContactFormData {
   projectDetails: string;
 }
 
+export interface WorkExperience {
+  company: string;
+  position: string;
+  duration: string;
+  description: string;
+  responsibilities: string[];
+}
+
 export interface SiteConfig {
   name: string;
   role: string;
@@ -83,6 +91,8 @@ export interface SiteConfig {
   heroHeadline: string;
   heroSubheadline: string;
   aboutStory: string;
+  aboutParagraphs: string[];
+  workExperience: WorkExperience[];
   targetClients: string[];
   resumePath: string;
   profileImage: string;

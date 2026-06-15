@@ -18,10 +18,10 @@ import { RESUME_PATH } from "@/constants/site";
 import { fadeInUp, defaultTransition } from "@/lib/animations";
 
 const trustIndicators = [
-  { icon: Award, label: "3+ Years Experience", value: "Proven Delivery" },
-  { icon: Building2, label: "Enterprise Systems Built", value: "ERP & Logistics" },
-  { icon: Briefcase, label: "SaaS & ERP Specialist", value: "Full Stack" },
-  { icon: Globe, label: "International Business Exposure", value: "Global Clients" },
+  { icon: Award, label: "Professional Experience", value: "3+ Years Experience" },
+  { icon: Building2, label: "Business Software", value: "Enterprise Applications" },
+  { icon: Briefcase, label: "Platform Expertise", value: "ERP & SaaS Platforms" },
+  { icon: Globe, label: "Live Deployments", value: "Production Systems" },
 ];
 
 export function HeroSection() {
@@ -85,16 +85,16 @@ export function HeroSection() {
               transition={{ ...defaultTransition, delay: 0.36 }}
               className="mt-8 flex flex-wrap gap-4 lg:mt-10"
             >
-              <Button href="/#contact" size="lg">
-                Book a Consultation
+              <Button href="/#case-studies" size="lg">
+                View My Work
                 <ArrowRight className="h-4 w-4" />
               </Button>
-              <Button href="/#case-studies" variant="secondary" size="lg">
-                View Case Studies
-              </Button>
-              <Button href={RESUME_PATH} variant="ghost" size="lg" external>
+              <Button href={RESUME_PATH} variant="secondary" size="lg" external>
                 <Download className="h-4 w-4" />
                 Download Resume
+              </Button>
+              <Button href="/#contact" variant="ghost" size="lg">
+                Contact Me
               </Button>
             </motion.div>
 

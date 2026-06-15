@@ -9,11 +9,11 @@ import { processSteps } from "@/data/process";
 export function ProcessSection() {
   return (
     <Section id="process" className="bg-muted/30">
-      <SectionHeader
-        label="Process"
-        title="A Proven Development Process"
-        description="Structured approach from discovery to deployment — transparent, predictable, and focused on outcomes."
-      />
+     <SectionHeader
+  label="Development Approach"
+  title="How I Build Software"
+  description="A practical approach focused on understanding requirements, writing maintainable code, and delivering reliable, scalable applications."
+/>
 
       <div className="relative">
         <div className="absolute left-8 top-0 hidden h-full w-px bg-gradient-to-b from-indigo-500/50 via-indigo-500/20 to-transparent md:block lg:left-1/2 lg:-translate-x-px" />

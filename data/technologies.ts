@@ -4,28 +4,36 @@ export const technologyGroups: TechnologyGroup[] = [
   {
     category: "Frontend",
     items: [
-      "React",
+      "React.js",
       "Next.js",
+      "JavaScript (ES6+)",
       "TypeScript",
-      "JavaScript",
-      "Redux",
+      "Redux Toolkit",
       "Ant Design",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
     ],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express.js"],
+    items: ["Node.js", "Express.js", "REST APIs", "JWT Authentication"],
   },
   {
     category: "Database",
-    items: ["MongoDB"],
+    items: ["MongoDB", "Mongoose"],
   },
   {
     category: "Integrations",
-    items: ["Stripe", "Google Maps", "REST APIs"],
+    items: [
+      "Stripe",
+      "Google Maps API",
+      "Email Services",
+      "Third-Party APIs",
+    ],
   },
   {
     category: "Tools",
-    items: ["Git", "GitHub", "Postman"],
+    items: ["Git", "GitHub", "Postman", "VS Code", "Chrome DevTools"],
   },
 ];

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MapPin, Users } from "lucide-react";
+import { Briefcase, MapPin, Users } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FadeIn } from "@/components/animations/FadeIn";
@@ -15,8 +15,8 @@ export function AboutSection() {
     <Section id="about" className="bg-muted/30">
       <SectionHeader
         label="About"
-        title="Building Software That Drives Business Results"
-        description="I translate complex business requirements into scalable, production-grade applications."
+        title="Full Stack MERN Developer with Enterprise Application Experience"
+        description="Building scalable, data-driven web applications with React.js, Next.js, Node.js, and MongoDB."
       />
 
       <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -53,14 +53,51 @@ export function AboutSection() {
               </Badge>
             </div>
 
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              {siteConfig.aboutStory}
-            </p>
+            <div className="space-y-4">
+              {siteConfig.aboutParagraphs.map((paragraph) => (
+                <p
+                  key={paragraph}
+                  className="text-lg leading-relaxed text-muted-foreground"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+
+            <div className="mt-8">
+              <div className="mb-4 flex items-center gap-2">
+                <Briefcase className="h-5 w-5 text-indigo-400" />
+                <h3 className="font-semibold text-foreground">Experience</h3>
+              </div>
+              {siteConfig.workExperience.map((job) => (
+                <div key={job.company} className="space-y-3">
+                  <div>
+                    <h4 className="font-semibold text-foreground">
+                      {job.position}
+                    </h4>
+                    <p className="text-sm text-indigo-400">{job.company}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {job.duration}
+                    </p>
+                  </div>
+                  <p className="text-base leading-relaxed text-muted-foreground">
+                    {job.description}
+                  </p>
+                  <ul className="list-disc space-y-1.5 pl-5 text-base text-muted-foreground">
+                    {job.responsibilities.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
 
             <div className="mt-8">
               <div className="mb-4 flex items-center gap-2">
                 <Users className="h-5 w-5 text-indigo-400" />
-                <h3 className="font-semibold text-foreground">Who I Work With</h3>
+                <h3 className="font-semibold text-foreground">
+                  Currently Open To
+                </h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {siteConfig.targetClients.map((client) => (

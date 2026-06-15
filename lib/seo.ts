@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SITE_URL } from "@/constants/site";
 import { siteConfig } from "@/data/profile";
 
-const title = `${siteConfig.name} | Software Consultant & Full Stack Developer`;
+const title = `${siteConfig.name} | Full Stack MERN Developer`;
 const description = siteConfig.heroSubheadline;
 
 export const baseMetadata: Metadata = {
@@ -13,13 +13,15 @@ export const baseMetadata: Metadata = {
   },
   description,
   keywords: [
-    "Software Consultant",
-    "Full Stack Developer",
+    "Full Stack MERN Developer",
+    "React.js Developer",
     "Next.js Developer",
+    "Node.js Developer",
+    "MongoDB Developer",
     "MERN Stack Developer",
-    "SaaS Development",
+    "Frontend Engineer",
     "ERP Development",
-    "Logistics Platform",
+    "SaaS Development",
     "Enterprise Applications",
     "Jaydeep Rathod",
     "Ahmedabad Developer",
@@ -38,7 +40,7 @@ export const baseMetadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} - Software Consultant`,
+        alt: `${siteConfig.name} - Full Stack MERN Developer`,
       },
     ],
   },
@@ -98,14 +100,15 @@ export function generateProfessionalServiceSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: `${siteConfig.name} - Software Consultancy`,
+    name: `${siteConfig.name} - Full Stack MERN Development`,
     description: siteConfig.heroSubheadline,
     url: SITE_URL,
     areaServed: "Worldwide",
     serviceType: [
-      "SaaS Development",
-      "ERP Development",
-      "Custom Software Development",
+      "Full Stack MERN Development",
+      "React.js Development",
+      "Next.js Development",
+      "ERP Frontend Development",
       "Web Application Development",
     ],
     provider: {

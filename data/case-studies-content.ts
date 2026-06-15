@@ -5,32 +5,33 @@ export const caseStudyContents: CaseStudyContent[] = [
     slug: "heycouriers",
     assetFolder: "heycouriers",
     title: "HeyCouriers",
-    tagline: "Courier management platform for Australian last-mile delivery operations",
+    tagline:
+      "Courier management platform for Australian last-mile delivery operations",
     overview:
-      "HeyCouriers is a production-grade logistics platform built for THE BIG BOX GROUP PTY LTD T/A HEY COURIERS, serving Australian businesses with shipment tracking, driver operations, route optimization, wallet billing, and invoice generation across web and mobile.",
+      "HeyCouriers is a production-grade logistics platform serving Australian businesses with shipment tracking, driver operations, route optimization, and operational dashboards across web and mobile.",
     description:
-      "A full-stack courier management system covering live delivery tracking on Google Maps, optimized route planning, shipment lifecycle management with proof-of-delivery, carrier and driver administration, wallet recharges, and company-level billing for Australian courier operations.",
+      "Developed and led the frontend architecture for a courier management platform covering live delivery tracking, optimized route planning, shipment lifecycle management, carrier and driver administration, and company-level billing interfaces.",
     businessProblem:
-      "Australian courier operators were managing deliveries across disconnected tools — spreadsheets for shipments, manual invoicing, and no unified view of driver routes or delivery status. Operations teams could not track 5,500+ completed deliveries, 443 pending shipments, and 7 active drivers in real time, leading to delayed customer updates and inefficient route planning across Sydney and surrounding regions.",
-    role: "Full Stack Developer — end-to-end ownership of frontend modules, REST APIs, database design, Google Maps integration, and deployment.",
+      "Australian courier operators needed unified operational interfaces for managing deliveries, driver routes, and shipment status. Operations teams required real-time visibility into completed deliveries, pending shipments, and active drivers without switching between disconnected tools.",
+    role: "Frontend Lead",
     responsibilities: [
       "Frontend Development",
-      "Backend Development",
-      "API Integration",
-      "Database Design",
-      "Authentication",
-      "Deployment",
-      "Testing",
+      "API Integrations",
+      "UI Architecture",
+      "State Management",
+      "Google Maps Integration",
+      "User Experience",
+      "Enterprise Features",
     ],
     challenges: [
-      "Synchronizing shipment status updates across the shipment list, detail panels, and live map markers in real time",
-      "Building Google Maps route visualization with numbered delivery stops and optimized polylines across large geographic areas",
-      "Implementing proof-of-delivery workflows with photo uploads, GPS coordinates, and downloadable POD documents",
-      "Designing wallet recharge and invoice generation flows with accurate financial calculations for multiple companies",
-      "Managing role-based access for drivers, depot managers, company admins, and platform operators",
+      "Synchronizing shipment status updates across shipment lists, detail panels, and live map markers",
+      "Building Google Maps route visualization with numbered delivery stops and optimized polylines",
+      "Implementing proof-of-delivery workflows with photo uploads and downloadable POD documents",
+      "Designing wallet recharge and invoice generation interfaces with accurate financial displays",
+      "Managing role-based UI flows for drivers, depot managers, company admins, and platform operators",
     ],
     solution:
-      "Built a modular React frontend with an Express.js and MongoDB backend. Integrated Google Maps for live delivery tracking and route optimization. Implemented a shipment timeline with status badges (Loaded, In Transit, Delivered, Failed), photo evidence capture, and POD downloads. Added wallet management, invoice generation, CSV route exports, and responsive mobile views for field operations.",
+      "Led frontend development of a modular React.js application with Redux state management and Ant Design components. Integrated Google Maps for live delivery tracking and route optimization. Built shipment timelines with status badges, photo evidence capture, POD downloads, wallet management views, and responsive mobile interfaces for field operations.",
     features: [
       "Live Delivery Dashboard",
       "Shipment Tracking Timeline",
@@ -45,7 +46,7 @@ export const caseStudyContents: CaseStudyContent[] = [
       {
         title: "Live Delivery Dashboard",
         description:
-          "Operational dashboard showing 5,500+ completed deliveries, 443 pending, and 7 active drivers with year-based filtering and a Sydney-area map with live route markers.",
+          "Operational dashboard showing completed deliveries, pending shipments, and active drivers with year-based filtering and a Sydney-area map with live route markers.",
       },
       {
         title: "Shipment Tracking",
@@ -60,31 +61,30 @@ export const caseStudyContents: CaseStudyContent[] = [
       {
         title: "Billing & Wallet",
         description:
-          "Wallet recharge invoices with company billing details, ABN tracking, line-item amounts, and automated total calculations for prepaid/postpaid accounts.",
+          "Wallet recharge invoice interfaces with company billing details, ABN tracking, line-item amounts, and automated total calculations for prepaid/postpaid accounts.",
       },
     ],
     technologies: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Google Maps API",
-      "REST APIs",
+      "React.js",
+      "Ant Design",
       "Redux",
+      "REST APIs",
+      "Google Maps API",
     ],
     architecture: [
       "React SPA with modular sidebar navigation for 15+ operational modules",
-      "Express.js REST API with MongoDB document models for shipments, routes, drivers, and companies",
-      "Google Maps JavaScript API for live markers, polylines, and route optimization",
-      "Role-based access control for admin, company, driver, and depot manager roles",
-      "File upload pipeline for proof-of-delivery photos and PDF invoice generation",
+      "Redux-based state management for shipment, route, and driver data flows",
+      "Google Maps JavaScript API integration for live markers, polylines, and route optimization",
+      "Role-based UI components for admin, company, driver, and depot manager roles",
+      "REST API integration layer for shipment tracking, billing, and operational workflows",
     ],
-    timeline: "Multi-phase development across discovery, core logistics modules, maps integration, billing, and production deployment.",
+    timeline:
+      "Multi-phase frontend development across core logistics modules, maps integration, billing interfaces, and production deployment.",
     businessImpact: [
-      "Centralized 5,500+ delivery records with real-time operational visibility",
-      "Automated invoice and wallet recharge workflows replacing manual billing",
+      "Centralized delivery records with real-time operational visibility",
+      "Streamlined invoice and wallet recharge workflows through intuitive UI",
       "End-to-end shipment tracking with photo-based proof of delivery",
-      "Route optimization reducing delivery planning time across Sydney metro routes",
+      "Route optimization interfaces reducing delivery planning time across Sydney metro routes",
     ],
     keyMetrics: [
       { label: "Completed Deliveries", value: "5,500+" },
@@ -99,32 +99,32 @@ export const caseStudyContents: CaseStudyContent[] = [
   {
     slug: "aluka-erp",
     assetFolder: "aluka-erp",
-    title: "Aluka ERP",
+    title: "Alux ERP",
     tagline: "Manufacturing ERP for aluminium extrusion and logistics operations",
     overview:
-      "Aluka ERP (Aluka Extrusion Industries LLP) is an enterprise resource planning system covering sales, production, warehouse, logistics weighbridge operations, material indents, purchase inward, scrap management, and customer document generation for aluminium extrusion manufacturing.",
+      "Alux ERP is an enterprise resource planning system covering inquiry management, production workflows, inventory tracking, logistics operations, and reporting for aluminium extrusion manufacturing.",
     description:
-      "A custom ERP platform for Aluka Extrusion with dashboard KPIs, production workflows, first and second weight entry at weighbridge, transporter and vehicle master management, material indents, purchase inward tracking, scrap management, and customer PDF generation.",
+      "Developed enterprise ERP interfaces supporting inquiry management, production workflows, inventory tracking, logistics operations, and reporting with scalable frontend modules focused on operational efficiency.",
     businessProblem:
-      "Aluka Extrusion needed to replace manual weighbridge recording, paper-based material indents, and disconnected production tracking. Logistics teams recorded vehicle weights on paper without photo evidence, warehouse staff lacked real-time visibility into work orders and dispatch weights, and customer documents were generated manually.",
-    role: "Full Stack Developer — responsible for ERP module development, logistics workflows, reporting dashboards, and PDF generation.",
+      "Manufacturing teams needed unified ERP interfaces to replace manual weighbridge recording, paper-based material indents, and disconnected production tracking. Warehouse and logistics staff lacked real-time visibility into work orders, dispatch weights, and customer document workflows.",
+    role: "Frontend Developer",
     responsibilities: [
       "Frontend Development",
-      "Backend Development",
-      "Database Design",
-      "API Integration",
-      "Authentication",
-      "Testing",
+      "UI Architecture",
+      "State Management",
+      "Business Logic Implementation",
+      "API Integrations",
+      "Enterprise Features",
     ],
     challenges: [
-      "Building first and second weight entry workflows with camera capture integration at the weighbridge",
-      "Tracking precise bundle weights (kg) across packing and dispatch with fiscal year filtering",
+      "Building first and second weight entry interfaces with camera capture integration at the weighbridge",
+      "Tracking precise bundle weights across packing and dispatch with fiscal year filtering",
       "Designing multi-module navigation across sales, production, warehouse, and logistics departments",
-      "Generating customer PDFs and purchase inward documents from structured ERP data",
-      "Managing material indents and scrap inventory with accurate stock reconciliation",
+      "Developing customer PDF and purchase inward document generation workflows in the UI",
+      "Managing material indents and scrap inventory interfaces with accurate stock reconciliation displays",
     ],
     solution:
-      "Developed a React-based ERP with Express.js and MongoDB. Built weighbridge modules with vehicle master, transporter management, dual weight entry (first/second), and camera capture for load verification. Added dashboard KPI cards for work orders, packed bundles, and dispatch weights with monthly bar charts. Implemented material indent, purchase inward, scrap management, and customer PDF modules.",
+      "Developed scalable React.js ERP interfaces with Redux Toolkit and Ant Design. Built weighbridge modules with vehicle master, transporter management, dual weight entry, and camera capture for load verification. Added dashboard KPI cards, material indent, purchase inward, scrap management, and customer PDF modules.",
     features: [
       "Operational Dashboard with KPI Cards",
       "First & Second Weight Entry",
@@ -139,42 +139,36 @@ export const caseStudyContents: CaseStudyContent[] = [
       {
         title: "Weighbridge Operations",
         description:
-          "First weight entry form with vehicle selection, material type, purchaser details, date/time stamping, and dual camera capture for load verification at entry.",
+          "First weight entry forms with vehicle selection, material type, purchaser details, date/time stamping, and dual camera capture for load verification at entry.",
       },
       {
         title: "Production Dashboard",
         description:
-          "KPI cards for profiles, quotations, work orders, packed bundles, and dispatched weights with FY 2026-27 filtering and monthly bar charts.",
+          "KPI cards for profiles, quotations, work orders, packed bundles, and dispatched weights with fiscal year filtering and monthly bar charts.",
       },
       {
         title: "Material & Procurement",
         description:
-          "Material indent creation, purchase inward recording, and scrap management modules connected to warehouse inventory.",
+          "Material indent creation, purchase inward recording, and scrap management modules connected to warehouse inventory views.",
       },
       {
         title: "Customer Documents",
         description:
-          "Automated customer PDF generation and purchase inward documentation from ERP transaction data.",
+          "Customer PDF generation and purchase inward documentation interfaces built from structured ERP transaction data.",
       },
     ],
-    technologies: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "PDF Generation",
-      "REST APIs",
-    ],
+    technologies: ["React.js", "Redux Toolkit", "Ant Design"],
     architecture: [
       "Multi-module ERP with icon-based sidebar for sales, production, warehouse, and logistics",
-      "MongoDB schemas for weighbridge entries, vehicles, materials, indents, and dispatch records",
-      "Camera capture integration for weighbridge photo evidence",
+      "Redux Toolkit state management for weighbridge entries, materials, indents, and dispatch records",
+      "Camera capture integration for weighbridge photo evidence in frontend workflows",
       "Fiscal year and date-range filtering on dashboard aggregations",
-      "PDF generation service for customer and purchase documents",
+      "PDF generation workflows for customer and purchase documents",
     ],
-    timeline: "Phased rollout starting with dashboard and production modules, followed by logistics weighbridge and procurement workflows.",
+    timeline:
+      "Phased frontend rollout starting with dashboard and production modules, followed by logistics weighbridge and procurement workflows.",
     businessImpact: [
-      "Digitized weighbridge operations with photo-verified weight entries",
+      "Digitized weighbridge operations with photo-verified weight entry interfaces",
       "Unified visibility into work orders, packing, and dispatch weights",
       "Automated customer PDF generation reducing manual document preparation",
       "Streamlined material indent and purchase inward workflows",
@@ -193,32 +187,32 @@ export const caseStudyContents: CaseStudyContent[] = [
     slug: "hasten-erp",
     assetFolder: "hasten-erp",
     title: "Hasten ERP",
-    tagline: "Manufacturing ERP for Hasten Extrusions with production-to-dispatch tracking",
+    tagline:
+      "Manufacturing ERP for Hasten Extrusions with production-to-dispatch tracking",
     overview:
-      "Hasten ERP is an enterprise platform for Hasten Extrusions Pvt. Ltd. covering design, sales, production, warehouse, packing, dispatch, reporting, and user management — tracking 685 work orders, 31,251 packed bundles, and 29,432 dispatched bundles with precise weight calculations.",
+      "Hasten ERP is an enterprise platform covering design, sales, production, warehouse, packing, dispatch, reporting, and user management for manufacturing operations.",
     description:
-      "A manufacturing ERP with role-based user management, production dashboards, bundle inward tracking, report generation, PDF printing workflows, and mobile-responsive views for factory and warehouse operations.",
+      "Built multiple ERP modules including Profile Management, Bundle Inward, Reporting, and operational dashboards with advanced data tables, PDF generation, print functionality, and role-based workflows.",
     businessProblem:
-      "Hasten Extrusions managed 175 profiles, 157 quotations, and hundreds of work orders across departments using disconnected processes. Teams lacked a single dashboard for packing vs dispatch metrics (1.1M+ kg packed, 1M+ kg dispatched), user access was unmanaged across 26 staff accounts, and report generation required manual PDF preparation.",
-    role: "Full Stack Developer — built dashboard analytics, user management, reporting, PDF generation, and production workflow modules.",
+      "Manufacturing teams managed hundreds of work orders across departments using disconnected processes. Teams lacked a single dashboard for packing vs dispatch metrics, user access was unmanaged across staff accounts, and report generation required manual PDF preparation.",
+    role: "Frontend Developer",
     responsibilities: [
       "Frontend Development",
-      "Backend Development",
-      "Database Design",
-      "Authentication",
-      "API Integration",
-      "Testing",
-      "Deployment",
+      "UI Architecture",
+      "State Management",
+      "Business Logic Implementation",
+      "API Integrations",
+      "Enterprise Features",
     ],
     challenges: [
-      "Aggregating large production datasets — 31,251 packed bundles and 29,432 dispatched bundles — into real-time dashboard KPIs",
-      "Implementing role-based user management with 26+ users, activity logging, and export to Excel/PDF",
+      "Aggregating large production datasets into real-time dashboard KPIs",
+      "Implementing role-based user management interfaces with activity logging and export to Excel/PDF",
       "Building monthly stats bar charts comparing work orders, packing, and dispatch volumes",
       "Designing bundle inward workflows with accurate weight and quantity tracking",
       "Creating print-ready PDF reports with consistent formatting for production teams",
     ],
     solution:
-      "Built a React ERP frontend with Express.js/MongoDB backend. Implemented a KPI dashboard with date-range filtering, monthly bar charts, and quotation conversion tracking (108 of 157 converted). Added paginated user management with role groups, activity logs, Excel/PDF export, bundle inward module, and mobile-responsive views for shop floor access.",
+      "Built a React.js ERP frontend with Redux and Ant Design. Implemented a KPI dashboard with date-range filtering, monthly bar charts, and quotation conversion tracking. Added paginated user management with role groups, activity logs, Excel/PDF export, bundle inward module, and mobile-responsive views.",
     features: [
       "Production Dashboard with KPI Cards",
       "Monthly Stats Bar Charts",
@@ -233,17 +227,17 @@ export const caseStudyContents: CaseStudyContent[] = [
       {
         title: "Production Dashboard",
         description:
-          "Seven KPI cards tracking 175 profiles, 157 quotations (108 converted), 685 work orders, 31,251 packed bundles (1.12M kg), and 29,432 dispatched bundles (1.05M kg).",
+          "KPI cards tracking profiles, quotations, work orders, packed bundles, and dispatched bundles with weight calculations and conversion metrics.",
       },
       {
         title: "User Management",
         description:
-          "Paginated user table with 26 accounts, role groups, last login tracking, active/inactive status, and Excel/PDF export for admin teams.",
+          "Paginated user table with role groups, last login tracking, active/inactive status, and Excel/PDF export for admin teams.",
       },
       {
         title: "Reporting & PDF",
         description:
-          "Report pages with production data filters and print-ready PDF generation for warehouse and dispatch documentation.",
+          "Report pages with production data filters and print-ready PDF generation using jsPDF for warehouse and dispatch documentation.",
       },
       {
         title: "Bundle Inward",
@@ -251,28 +245,21 @@ export const caseStudyContents: CaseStudyContent[] = [
           "Bundle inward module for recording incoming production bundles with weight and quantity validation against work orders.",
       },
     ],
-    technologies: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "PDF Generation",
-      "Redux",
-      "REST APIs",
-    ],
+    technologies: ["React.js", "Redux", "Ant Design", "jsPDF"],
     architecture: [
       "Multi-department ERP with sidebar modules for design, sales, production, warehouse, packing, and dispatch",
-      "MongoDB aggregation pipelines for dashboard KPI calculations and monthly stats",
-      "Role-based access with user groups, activity logs, and session tracking",
-      "PDF generation engine for production and dispatch reports",
+      "Redux state management for dashboard KPI calculations and monthly stats",
+      "Role-based access UI with user groups, activity logs, and session tracking",
+      "jsPDF integration for production and dispatch report generation",
       "Responsive layout supporting desktop admin and mobile shop floor views",
     ],
-    timeline: "Iterative development from core dashboard and user management through production tracking, reporting, and PDF workflows.",
+    timeline:
+      "Iterative frontend development from core dashboard and user management through production tracking, reporting, and PDF workflows.",
     businessImpact: [
-      "Real-time visibility into 685 work orders and 1.1M+ kg of packed production",
-      "Managed 26 user accounts with role-based access and activity auditing",
+      "Real-time visibility into work orders and packed production metrics",
+      "Managed user accounts with role-based access and activity auditing",
       "Automated PDF report generation replacing manual print preparation",
-      "Quotation conversion tracking (69% conversion rate) for sales pipeline visibility",
+      "Quotation conversion tracking for sales pipeline visibility",
     ],
     keyMetrics: [
       { label: "Work Orders", value: "685" },
@@ -287,32 +274,33 @@ export const caseStudyContents: CaseStudyContent[] = [
   {
     slug: "smartbuyer",
     assetFolder: "smartbuyer",
-    title: "SmartBuyer (PROCEM)",
-    tagline: "Procurement platform for RFQ management, purchase orders, and supplier workflows",
+    title: "SmartBuyer",
+    tagline:
+      "Procurement platform for RFQ management, purchase orders, and supplier workflows",
     overview:
-      "SmartBuyer (PROCEM) is a B2B procurement platform enabling vendors and buyers to manage RFQ lifecycles — from initial offers and revised quotations through purchase order approval, invoicing, and procurement inward tracking.",
+      "SmartBuyer is a B2B procurement platform enabling vendors and buyers to manage RFQ lifecycles — from initial offers and revised quotations through purchase order approval, invoicing, and procurement inward tracking.",
     description:
-      "An enterprise procurement system with vendor RFQ dashboards, multi-stage offer submissions, purchase order summaries with GST calculations, approval workflows, supplier onboarding, demo requests, and invoice management.",
+      "Developed procurement management workflows including RFQs, supplier management, approvals, purchase orders, GRNs, and billing modules with complex multi-step workflows and business process interfaces.",
     businessProblem:
-      "Procurement teams and vendors tracked RFQs through email chains and spreadsheets with no visibility into offer stages — initial submissions, revised offers (R1/R2), PO approvals, or lost bids. Finance teams manually calculated GST amounts on purchase orders, and supplier onboarding lacked a structured multi-step workflow.",
-    role: "Full Stack Developer — built RFQ vendor portal, purchase order module, approval workflows, and supplier onboarding.",
+      "Procurement teams and vendors tracked RFQs through email chains and spreadsheets with no visibility into offer stages, PO approvals, or lost bids. Finance teams manually calculated GST amounts on purchase orders, and supplier onboarding lacked a structured multi-step workflow.",
+    role: "Frontend Developer",
     responsibilities: [
       "Frontend Development",
-      "Backend Development",
-      "API Integration",
-      "Database Design",
-      "Authentication",
-      "Testing",
+      "UI Architecture",
+      "Business Logic Implementation",
+      "API Integrations",
+      "User Experience",
+      "Enterprise Features",
     ],
     challenges: [
-      "Tracking RFQ lifecycle stages — initial offer, revised offers, PO received, and RFQ lost — with real-time status counters",
-      "Building purchase order summary with GST-inclusive and GST-exclusive amount calculations",
+      "Tracking RFQ lifecycle stages with real-time status counters across vendor dashboards",
+      "Building purchase order summary interfaces with GST-inclusive and GST-exclusive amount calculations",
       "Designing multi-step supplier onboarding with demo request and approval flows",
       "Implementing date-range and company filters across large RFQ datasets with sortable data tables",
       "Managing procurement inward workflows connecting PO approvals to inventory receipt",
     ],
     solution:
-      "Developed a React procurement portal with Express.js/MongoDB backend. Built vendor RFQ dashboard with status KPI cards, sortable data tables with date/company filters, PO summary with approval status tracking, multi-step supplier onboarding, invoice pages, and procurement inward module.",
+      "Developed a React.js procurement portal with Ant Design. Built vendor RFQ dashboard with status KPI cards, sortable data tables with date/company filters, PO summary with approval status tracking, multi-step supplier onboarding, invoice pages, and procurement inward module.",
     features: [
       "RFQ Vendor Dashboard",
       "Multi-Stage Offer Tracking",
@@ -327,12 +315,12 @@ export const caseStudyContents: CaseStudyContent[] = [
       {
         title: "RFQ Management",
         description:
-          "Vendor dashboard with KPI cards for total RFQs, pending initial offers, revised offers (R1/R2), PO received, and lost RFQs — with sortable table columns for client, category, buyer, and due dates.",
+          "Vendor dashboard with KPI cards for total RFQs, pending initial offers, revised offers, PO received, and lost RFQs — with sortable table columns for client, category, buyer, and due dates.",
       },
       {
         title: "Purchase Orders",
         description:
-          "PO summary with status cards (issued, approval pending, accepted, rejected) and financial columns for amounts with and without GST.",
+          "PO summary with status cards and financial columns for amounts with and without GST.",
       },
       {
         title: "Supplier Onboarding",
@@ -342,25 +330,19 @@ export const caseStudyContents: CaseStudyContent[] = [
       {
         title: "Invoicing & Inward",
         description:
-          "Invoice generation linked to approved POs and procurement inward tracking for received goods against purchase orders.",
+          "Invoice generation interfaces linked to approved POs and procurement inward tracking for received goods.",
       },
     ],
-    technologies: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "REST APIs",
-      "Ant Design",
-    ],
+    technologies: ["React.js", "Ant Design"],
     architecture: [
       "Vendor-facing portal with sidebar navigation for RFQ, PO, and user management modules",
-      "MongoDB document models for RFQs, offers, purchase orders, and supplier profiles",
-      "Multi-stage workflow engine for RFQ status transitions and approval chains",
+      "Multi-stage workflow UI for RFQ status transitions and approval chains",
       "Data table components with server-side sorting, filtering, and pagination",
-      "GST calculation layer on purchase order financial summaries",
+      "GST calculation display layer on purchase order financial summaries",
+      "REST API integration for procurement lifecycle management",
     ],
-    timeline: "Built in phases — RFQ vendor portal first, then PO approval workflows, onboarding, and invoicing modules.",
+    timeline:
+      "Built in phases — RFQ vendor portal first, then PO approval workflows, onboarding, and invoicing modules.",
     businessImpact: [
       "Centralized RFQ-to-PO procurement cycle replacing email-based tracking",
       "Real-time visibility into offer stages and approval bottlenecks",
@@ -383,30 +365,29 @@ export const caseStudyContents: CaseStudyContent[] = [
     title: "PharmaLinkage",
     tagline: "Global pharmaceutical sourcing marketplace and B2B admin platform",
     overview:
-      "PharmaLinkage (app.pharmalinkage.com) is a B2B pharmaceutical marketplace connecting buyers with API, formulation, and CDMO manufacturers worldwide — with company onboarding, facility management, inquiry workflows, concierge services, and Stripe-powered payments.",
+      "PharmaLinkage is a B2B pharmaceutical marketplace connecting buyers with API, formulation, and CDMO manufacturers worldwide — with company onboarding, facility management, inquiry workflows, and Stripe-powered payments.",
     description:
-      "A healthcare marketplace platform with admin dashboard tracking 12 companies and 9 monthly onboardings, Business Lounge supplier discovery with regulatory filtering, multi-step API/formulation registration forms, manufacturing facility profiles, inquiry management, and concierge service workflows.",
+      "Contributed to a global pharmaceutical sourcing platform by developing responsive user interfaces, supplier discovery workflows, sourcing modules, and payment-related functionality with Stripe integration.",
     businessProblem:
-      "Pharmaceutical buyers struggled to discover verified global manufacturers with the right regulatory approvals (FDA, WHO, Health Canada), manufacturing capacity, and product categories. Admins had no centralized dashboard to track company growth, facility types (API, Formulation, CDMO), inquiry response rates, or subscription expirations.",
-    role: "Full Stack Developer — built marketplace discovery, admin dashboard, multi-step registration forms, inquiry system, and payment integration.",
+      "Pharmaceutical buyers struggled to discover verified global manufacturers with the right regulatory approvals, manufacturing capacity, and product categories. Admins needed centralized dashboards to track company growth, facility types, inquiry response rates, and subscription expirations.",
+    role: "Frontend Developer",
     responsibilities: [
       "Frontend Development",
-      "Backend Development",
-      "API Integration",
-      "Database Design",
-      "Authentication",
-      "Deployment",
-      "Testing",
+      "API Integrations",
+      "UI Architecture",
+      "User Experience",
+      "Business Logic Implementation",
+      "Enterprise Features",
     ],
     challenges: [
-      "Building Business Lounge discovery with multi-parameter filters — country, regulatory approvals, capacity (KL), and monthly output (MT)",
+      "Building Business Lounge discovery with multi-parameter filters — country, regulatory approvals, capacity, and monthly output",
       "Designing multi-step registration forms for API info, formulation details, and manufacturing facility profiles",
       "Tracking company acquisition metrics and facility type breakdowns on the admin dashboard",
       "Implementing inquiry management for sent/received B2B communications with response tracking",
-      "Integrating Stripe payments for concierge service purchases",
+      "Integrating Stripe payment workflows for concierge service purchases",
     ],
     solution:
-      "Built a React/Next.js marketplace with Node.js/MongoDB backend. Implemented admin dashboard with acquisition charts, Business Lounge with grid/list views and regulatory badge display, multi-step onboarding forms, manufacturing facility profiles, inquiry workflows, concierge service management, and Stripe payment integration.",
+      "Developed responsive React.js interfaces with Ant Design for marketplace discovery, admin dashboards, multi-step onboarding forms, manufacturing facility profiles, inquiry workflows, and Stripe payment integration — optimized for multiple devices.",
     features: [
       "Admin Analytics Dashboard",
       "Business Lounge Marketplace",
@@ -421,7 +402,7 @@ export const caseStudyContents: CaseStudyContent[] = [
       {
         title: "Admin Dashboard",
         description:
-          "KPI cards for 12 total companies, 9 monthly onboardings, 7 API facilities, 4 formulation facilities, and 1 CDMO — with monthly acquisition bar charts.",
+          "KPI cards for total companies, monthly onboardings, API facilities, formulation facilities, and CDMO — with monthly acquisition bar charts.",
       },
       {
         title: "Business Lounge",
@@ -439,25 +420,18 @@ export const caseStudyContents: CaseStudyContent[] = [
           "Concierge service request, purchase, and management workflows with Stripe payment processing for premium marketplace services.",
       },
     ],
-    technologies: [
-      "React",
-      "Next.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Stripe",
-      "REST APIs",
-    ],
+    technologies: ["React.js", "Ant Design", "Stripe"],
     architecture: [
-      "Multi-tenant marketplace with admin and company-facing portals",
-      "MongoDB schemas for companies, facilities, inquiries, and concierge services",
+      "Multi-tenant marketplace UI with admin and company-facing portals",
       "Multi-step form wizard with progressive validation for pharmaceutical registrations",
       "Filter engine for Business Lounge with regulatory approval and capacity parameters",
-      "Stripe webhook integration for concierge service payments",
+      "Stripe payment workflow integration for concierge service purchases",
+      "REST API integration for supplier discovery, inquiries, and onboarding",
     ],
-    timeline: "Marketplace core and admin dashboard first, followed by Business Lounge discovery, registration forms, and payment integration.",
+    timeline:
+      "Marketplace core and admin dashboard first, followed by Business Lounge discovery, registration forms, and payment integration.",
     businessImpact: [
-      "Onboarded 12 companies with structured facility type tracking",
+      "Structured company onboarding with facility type tracking",
       "Centralized global supplier discovery with regulatory compliance filtering",
       "Streamlined B2B inquiry workflows replacing manual email sourcing",
       "Stripe-powered concierge services enabling monetized marketplace features",
@@ -471,6 +445,99 @@ export const caseStudyContents: CaseStudyContent[] = [
     category: "Healthcare Marketplace",
     featured: true,
     featuredOrder: 5,
+  },
+  {
+    slug: "homedelish",
+    assetFolder: "homedelish",
+    title: "HomeDelish",
+    tagline: "Full-stack food ordering platform built with the MERN stack",
+    overview:
+      "HomeDelish is a full-stack food ordering platform demonstrating end-to-end MERN stack development — from user authentication and menu management to cart functionality, order placement, and payment integration.",
+    description:
+      "Built a full-stack food ordering platform using the MERN stack. Implemented user authentication, menu management, cart functionality, order placement, payment integration, and backend APIs.",
+    businessProblem:
+      "A food ordering solution was needed that could handle user accounts, menu browsing, cart management, secure checkout, and order tracking — requiring both a responsive frontend and a scalable backend API layer.",
+    role: "Full Stack Developer",
+    responsibilities: [
+      "Frontend Development",
+      "Backend Development",
+      "API Development",
+      "Database Design",
+      "Authentication",
+      "Payment Integration",
+    ],
+    challenges: [
+      "Building secure user authentication and session management across frontend and backend",
+      "Designing menu management and cart state flows with real-time price calculations",
+      "Implementing order placement workflows with inventory and status tracking",
+      "Integrating Stripe payment processing for secure checkout",
+      "Structuring MongoDB schemas for users, menus, orders, and payment records",
+    ],
+    solution:
+      "Built a MERN stack application with React.js frontend and Node.js/Express.js backend with MongoDB. Implemented JWT authentication, menu CRUD operations, cart and checkout flows, order management APIs, and Stripe payment integration.",
+    features: [
+      "User Authentication",
+      "Menu Management",
+      "Shopping Cart",
+      "Order Placement",
+      "Stripe Payment Integration",
+      "Order Tracking",
+      "Admin Dashboard",
+      "Responsive UI",
+    ],
+    featureBreakdown: [
+      {
+        title: "User Authentication",
+        description:
+          "Secure registration and login with JWT-based authentication and protected routes across the application.",
+      },
+      {
+        title: "Menu & Cart",
+        description:
+          "Menu browsing with category filters, item customization, and cart management with real-time total calculations.",
+      },
+      {
+        title: "Order Management",
+        description:
+          "Order placement workflows with status tracking, order history, and admin order management interfaces.",
+      },
+      {
+        title: "Payment Integration",
+        description:
+          "Stripe payment integration for secure checkout with order confirmation and payment status handling.",
+      },
+    ],
+    technologies: [
+      "MongoDB",
+      "Express.js",
+      "Node.js",
+      "JavaScript",
+      "Stripe",
+    ],
+    architecture: [
+      "React.js frontend with component-based architecture and responsive design",
+      "Node.js and Express.js REST API with MongoDB and Mongoose data models",
+      "JWT authentication middleware for protected API routes",
+      "Stripe payment integration for checkout workflows",
+      "MongoDB schemas for users, menus, orders, and transactions",
+    ],
+    timeline:
+      "Full-stack development from authentication and menu modules through cart, checkout, and payment integration.",
+    businessImpact: [
+      "End-to-end food ordering workflow from menu browse to payment confirmation",
+      "Secure authentication and role-based access for users and admins",
+      "Scalable API architecture supporting order lifecycle management",
+      "Demonstrates hands-on MERN stack development capabilities",
+    ],
+    keyMetrics: [
+      { label: "Stack", value: "MERN" },
+      { label: "Auth", value: "JWT" },
+      { label: "Payments", value: "Stripe" },
+      { label: "Database", value: "MongoDB" },
+    ],
+    category: "Full Stack",
+    featured: true,
+    featuredOrder: 6,
   },
 ];
 
