@@ -9,6 +9,7 @@ import {
   User,
   Calendar,
   Target,
+  ExternalLink,
 } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -76,6 +77,14 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
             {study.overview}
           </p>
+          {study.liveUrl ? (
+            <div className="mt-6">
+              <Button href={study.liveUrl} variant="secondary" external>
+                Visit Live App
+                <ExternalLink className="h-4 w-4" />
+              </Button>
+            </div>
+          ) : null}
 
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {study.keyMetrics.map((metric) => (
@@ -310,10 +319,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
           <div className="mt-12 text-center">
             <p className="mb-6 text-muted-foreground">
-              Need a similar system for your business?
+              Interested in discussing a Senior React Developer opportunity?
             </p>
             <Button href="/#contact" size="lg">
-              Book a Consultation
+              Contact for Role Discussion
             </Button>
           </div>
         </Section>

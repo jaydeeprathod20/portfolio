@@ -14,7 +14,7 @@ export function TechnologiesSection() {
     <SectionHeader
   label="Technical Skills"
   title="Modern Technologies & Development Tools"
-  description="Technologies I've used to build enterprise applications, logistics platforms, admin dashboards, and full-stack web solutions."
+  description="Technologies I've used to build enterprise applications, logistics platforms, admin dashboards, and frontend-led web solutions."
 />
 
       <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">

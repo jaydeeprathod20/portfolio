@@ -22,7 +22,7 @@ export function FAQSection() {
       <SectionHeader
         label="FAQ"
         title="Frequently Asked Questions"
-        description="Common questions about working together on your next software project."
+        description="Common questions for recruiters and hiring teams evaluating me for Senior React Developer roles."
       />
 
       <FadeIn className="mx-auto max-w-3xl">

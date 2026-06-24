@@ -59,7 +59,7 @@ export function Header() {
             <ThemeToggle />
             <div className="hidden sm:block">
               <Button href="/#contact" size="sm">
-                Book a Consultation
+                Hire React Developer
               </Button>
             </div>
             <button
@@ -97,7 +97,7 @@ export function Header() {
                 ))}
                 <div className="mt-2 flex flex-col gap-2 px-4">
                   <Button href="/#contact" size="sm">
-                    Book a Consultation
+                    Hire React Developer
                   </Button>
                   <Button href={RESUME_PATH} variant="secondary" size="sm" external>
                     Download Resume

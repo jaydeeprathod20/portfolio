@@ -44,7 +44,7 @@ export function HeroSection() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-indigo-500" />
             </span>
-            Available for new projects
+            Open to Senior React Developer roles
           </span>
         </motion.div>
 

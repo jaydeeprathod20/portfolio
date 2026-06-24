@@ -11,6 +11,7 @@ export interface CaseStudyContent {
   assetFolder: string;
   title: string;
   tagline: string;
+  liveUrl?: string;
   overview: string;
   description: string;
   businessProblem: string;

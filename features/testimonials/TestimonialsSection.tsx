@@ -14,8 +14,8 @@ export function TestimonialsSection() {
     <Section id="testimonials">
       <SectionHeader
         label="Testimonials"
-        title="What Clients Say"
-        description="Feedback from businesses I've helped build and scale their software products."
+        title="Professional Feedback"
+        description="Feedback from teams and businesses I've supported through production React applications."
       />
 
       <StaggerContainer className="grid gap-6 sm:grid-cols-2">

@@ -18,10 +18,10 @@ const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email"),
   company: z.string().optional(),
-  budget: z.string().min(1, "Please select a budget range"),
+  budget: z.string().min(1, "Please select an opportunity type"),
   projectDetails: z
     .string()
-    .min(20, "Please provide at least 20 characters about your project"),
+    .min(20, "Please provide at least 20 characters about the role"),
 });
 
 type ContactFormValues = z.infer<typeof contactSchema>;
@@ -64,6 +64,7 @@ export function ContactSection() {
             from_email: data.email,
             company: data.company || "Not provided",
             budget: data.budget,
+            opportunity_type: data.budget,
             message: data.projectDetails,
             to_email: SOCIAL_LINKS.email,
           },
@@ -71,8 +72,8 @@ export function ContactSection() {
         );
         message.success("Message sent successfully! I'll get back to you soon.");
       } else {
-        const mailtoLink = `mailto:${SOCIAL_LINKS.email}?subject=Project Inquiry from ${encodeURIComponent(data.name)}&body=${encodeURIComponent(
-          `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || "N/A"}\nBudget: ${data.budget}\n\nProject Details:\n${data.projectDetails}`
+        const mailtoLink = `mailto:${SOCIAL_LINKS.email}?subject=React.js Role Opportunity from ${encodeURIComponent(data.name)}&body=${encodeURIComponent(
+          `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || "N/A"}\nOpportunity Type: ${data.budget}\n\nRole Details:\n${data.projectDetails}`
         )}`;
         const anchor = document.createElement("a");
         anchor.href = mailtoLink;
@@ -91,8 +92,8 @@ export function ContactSection() {
     <Section id="contact">
       <SectionHeader
         label="Contact"
-        title="Let's Build Your Next Product"
-        description="Tell me about your project and I'll respond within 24 hours with next steps."
+        title="Let's Discuss a Senior React Developer Role"
+        description="Share the role details and I'll respond within 24 hours with my availability, experience fit, and next steps."
       />
 
       <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
@@ -205,10 +206,10 @@ export function ContactSection() {
 
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-foreground">
-                  Budget *
+                  Opportunity Type *
                 </label>
                 <Select
-                  placeholder="Select budget range"
+                  placeholder="Select role type"
                   size="large"
                   className="w-full"
                   options={BUDGET_OPTIONS.map((opt) => ({
@@ -225,11 +226,11 @@ export function ContactSection() {
 
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-foreground">
-                  Project Details *
+                  Role Details *
                 </label>
                 <TextArea
                   {...register("projectDetails")}
-                  placeholder="Tell me about your project, goals, and timeline..."
+                  placeholder="Tell me about the React.js role, responsibilities, tech stack, location/remote setup, and timeline..."
                   rows={5}
                   status={errors.projectDetails ? "error" : undefined}
                 />
@@ -249,7 +250,7 @@ export function ContactSection() {
                 ) : (
                   <>
                     <Send className="h-4 w-4" />
-                    Send Project Inquiry
+                    Send Role Opportunity
                   </>
                 )}
               </Button>

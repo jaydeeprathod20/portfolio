@@ -17,9 +17,9 @@ export const whyHireReasons: WhyHireReason[] = [
   },
   {
     id: "react-mern-expertise",
-    title: "React & MERN Expertise",
+    title: "React & Frontend Expertise",
     description:
-      "Experienced in developing modern web applications using React.js, Next.js, Redux, Node.js, Express.js, and MongoDB, with a focus on scalable architecture, performance, and maintainable code.",
+      "Experienced in developing modern web applications using React.js, Next.js, and Redux, with a focus on scalable frontend architecture, performance, and maintainable code, plus hands-on exposure to Node.js, Express.js, and MongoDB.",
     icon: Code2,
   },
   {
@@ -47,7 +47,7 @@ export const whyHireReasons: WhyHireReason[] = [
     id: "continuous-learning",
     title: "Continuous Learning Mindset",
     description:
-      "Actively expanding expertise in MERN stack development, backend technologies, system design, and modern software engineering practices.",
+      "Actively expanding frontend expertise, backend exposure, system design knowledge, and modern software engineering practices.",
     icon: GraduationCap,
   },
 ];

@@ -15,8 +15,8 @@ export function AboutSection() {
     <Section id="about" className="bg-muted/30">
       <SectionHeader
         label="About"
-        title="Full Stack MERN Developer with Enterprise Application Experience"
-        description="Building scalable, data-driven web applications with React.js, Next.js, Node.js, and MongoDB."
+        title="Senior React Developer with Enterprise Application Experience"
+        description="Building scalable, data-driven web applications with React.js, Next.js, and modern frontend architecture, with hands-on exposure to Node.js, Express.js, and MongoDB."
       />
 
       <div className="grid items-center gap-12 lg:grid-cols-2">

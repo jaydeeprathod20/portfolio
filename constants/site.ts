@@ -19,9 +19,9 @@ export const EMAILJS_CONFIG = {
 } as const;
 
 export const BUDGET_OPTIONS = [
-  { label: "Under $5,000", value: "under-5k" },
-  { label: "$5,000 – $15,000", value: "5k-15k" },
-  { label: "$15,000 – $50,000", value: "15k-50k" },
-  { label: "$50,000+", value: "50k-plus" },
-  { label: "Not sure yet", value: "not-sure" },
+  { label: "Full-time React.js role", value: "full-time-react-role" },
+  { label: "Contract React.js role", value: "contract-react-role" },
+  { label: "Frontend Engineer role", value: "frontend-engineer-role" },
+  { label: "Next.js / React.js role", value: "nextjs-react-role" },
+  { label: "Other hiring opportunity", value: "other-hiring-opportunity" },
 ] as const;

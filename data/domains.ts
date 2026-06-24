@@ -56,7 +56,7 @@ export const businessDomains: BusinessDomain[] = [
     id: "ecommerce",
     title: "E-Commerce Solutions",
     description:
-      "Full-stack ordering platforms with payments, inventory, and admin management.",
+      "React-led ordering platforms with payments, inventory, and admin management.",
     icon: ShoppingCart,
   },
 ];

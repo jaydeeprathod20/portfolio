@@ -19,7 +19,7 @@ export function ServicesSection() {
     <SectionHeader
   label="Technical Expertise"
   title="Technologies & Solutions I Build"
-  description="3+ years of experience building React applications, enterprise ERP systems, logistics platforms, admin dashboards, and full-stack MERN solutions."
+  description="3+ years of experience building React applications, enterprise ERP systems, logistics platforms, admin dashboards, and frontend-led web solutions."
 />
 
       <div className="grid gap-4 lg:grid-cols-2">

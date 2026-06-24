@@ -97,6 +97,96 @@ export const caseStudyContents: CaseStudyContent[] = [
     featuredOrder: 1,
   },
   {
+    slug: "outdoorx",
+    assetFolder: "outdoorx",
+    title: "OutdoorX",
+    tagline:
+      "Enterprise outdoor media management platform for digital advertising operations",
+    liveUrl: "https://app.outdoorx.ai/",
+    overview:
+      "OutdoorX is a production-grade outdoor media management platform used for centralized monitoring and control of digital advertising devices across outdoor media networks.",
+    description:
+      "Led frontend development for OutdoorX, building intelligent dashboards, device management workflows, scheduling modules, operational reporting, and real-time monitoring interfaces for digital advertising operations.",
+    businessProblem:
+      "Outdoor media operators needed a centralized platform to monitor distributed advertising devices, manage campaign schedules, control operational workflows, and give internal teams clear visibility into device activity, performance, and reporting.",
+    role: "Team Lead",
+    responsibilities: [
+      "Team Leadership",
+      "Frontend Development",
+      "UI Architecture",
+      "State Management",
+      "API Integrations",
+      "RBAC Implementation",
+      "Enterprise Features",
+    ],
+    challenges: [
+      "Designing dashboards that give operations teams quick visibility into device health, campaign activity, and performance metrics",
+      "Building device management workflows for centralized control of distributed digital advertising screens",
+      "Implementing role-based access control across admin, operations, and management workflows",
+      "Creating scheduling interfaces that support campaign planning, device assignments, and operational coordination",
+      "Integrating REST APIs for device communication, analytics reporting, and real-time operational visibility",
+    ],
+    solution:
+      "Led the React.js frontend implementation using Redux Toolkit and Ant Design. Built modular dashboards, device management screens, scheduling workflows, live monitoring modules, RBAC-driven interfaces, and reporting views connected to REST APIs for device communication and analytics.",
+    features: [
+      "Intelligent Operations Dashboard",
+      "Digital Device Management",
+      "Campaign Scheduling Workflows",
+      "Real-Time Monitoring",
+      "Role-Based Access Control",
+      "Operational Reporting",
+      "Workflow Automation",
+      "Analytics Visibility",
+    ],
+    featureBreakdown: [
+      {
+        title: "Operations Dashboard",
+        description:
+          "Centralized dashboard views for monitoring device activity, operational status, and advertising network performance from a single interface.",
+      },
+      {
+        title: "Device Management",
+        description:
+          "Device administration workflows for tracking, controlling, and organizing digital advertising screens across outdoor media locations.",
+      },
+      {
+        title: "Scheduling Workflows",
+        description:
+          "Campaign and content scheduling interfaces supporting operational planning, device assignment, and workflow coordination.",
+      },
+      {
+        title: "RBAC & Reporting",
+        description:
+          "Role-based access controls with reporting dashboards that help teams manage permissions, operational visibility, and analytics review.",
+      },
+    ],
+    technologies: ["React.js", "Redux Toolkit", "Ant Design", "REST APIs"],
+    architecture: [
+      "React.js frontend with modular dashboard, device, scheduling, and reporting modules",
+      "Redux Toolkit state management for operational data, filters, and workflow state",
+      "Ant Design component system for enterprise tables, forms, dashboards, and admin controls",
+      "RBAC-driven UI flows for different operational roles and permission levels",
+      "REST API integration layer for device communication, analytics reporting, and operational visibility",
+    ],
+    timeline:
+      "Production frontend delivery across dashboard foundations, device management, scheduling workflows, RBAC, reporting, and real-time monitoring modules.",
+    businessImpact: [
+      "Centralized monitoring and control for distributed digital advertising devices",
+      "Improved operational visibility through intelligent dashboards and reporting views",
+      "Streamlined scheduling workflows for campaign and device coordination",
+      "Scalable frontend architecture supporting production outdoor media operations",
+    ],
+    keyMetrics: [
+      { label: "Role", value: "Team Lead" },
+      { label: "Platform", value: "Production" },
+      { label: "Modules", value: "Dashboard + Devices" },
+      { label: "Access Control", value: "RBAC" },
+    ],
+    category: "Outdoor Media",
+    featured: true,
+    featuredOrder: 2,
+  },
+  {
     slug: "aluka-erp",
     assetFolder: "aluka-erp",
     title: "Alux ERP",
@@ -181,7 +271,7 @@ export const caseStudyContents: CaseStudyContent[] = [
     ],
     category: "Manufacturing ERP",
     featured: true,
-    featuredOrder: 3,
+    featuredOrder: 4,
   },
   {
     slug: "hasten-erp",
@@ -269,7 +359,7 @@ export const caseStudyContents: CaseStudyContent[] = [
     ],
     category: "Manufacturing ERP",
     featured: true,
-    featuredOrder: 2,
+    featuredOrder: 3,
   },
   {
     slug: "smartbuyer",
@@ -357,7 +447,7 @@ export const caseStudyContents: CaseStudyContent[] = [
     ],
     category: "Procurement",
     featured: true,
-    featuredOrder: 4,
+    featuredOrder: 5,
   },
   {
     slug: "pharmalinkage",
@@ -444,25 +534,25 @@ export const caseStudyContents: CaseStudyContent[] = [
     ],
     category: "Healthcare Marketplace",
     featured: true,
-    featuredOrder: 5,
+    featuredOrder: 6,
   },
   {
     slug: "homedelish",
     assetFolder: "homedelish",
     title: "HomeDelish",
-    tagline: "Full-stack food ordering platform built with the MERN stack",
+    tagline: "React food ordering platform with hands-on MERN stack exposure",
     overview:
-      "HomeDelish is a full-stack food ordering platform demonstrating end-to-end MERN stack development — from user authentication and menu management to cart functionality, order placement, and payment integration.",
+      "HomeDelish is a food ordering platform demonstrating React frontend development with hands-on exposure to Node.js, Express.js, and MongoDB across authentication, menu management, cart functionality, order placement, and payment integration.",
     description:
-      "Built a full-stack food ordering platform using the MERN stack. Implemented user authentication, menu management, cart functionality, order placement, payment integration, and backend APIs.",
+      "Built a React-led food ordering platform with hands-on MERN stack exposure. Implemented user authentication, menu management, cart functionality, order placement, payment integration, and backend API workflows.",
     businessProblem:
       "A food ordering solution was needed that could handle user accounts, menu browsing, cart management, secure checkout, and order tracking — requiring both a responsive frontend and a scalable backend API layer.",
-    role: "Full Stack Developer",
+    role: "React Developer with Backend Exposure",
     responsibilities: [
       "Frontend Development",
-      "Backend Development",
-      "API Development",
-      "Database Design",
+      "Backend Exposure",
+      "API Integration",
+      "Database Exposure",
       "Authentication",
       "Payment Integration",
     ],
@@ -471,10 +561,10 @@ export const caseStudyContents: CaseStudyContent[] = [
       "Designing menu management and cart state flows with real-time price calculations",
       "Implementing order placement workflows with inventory and status tracking",
       "Integrating Stripe payment processing for secure checkout",
-      "Structuring MongoDB schemas for users, menus, orders, and payment records",
+      "Hands-on exposure to structuring MongoDB schemas for users, menus, orders, and payment records",
     ],
     solution:
-      "Built a MERN stack application with React.js frontend and Node.js/Express.js backend with MongoDB. Implemented JWT authentication, menu CRUD operations, cart and checkout flows, order management APIs, and Stripe payment integration.",
+      "Built a React.js frontend with hands-on exposure to Node.js, Express.js, and MongoDB for backend workflows. Implemented JWT authentication, menu CRUD operations, cart and checkout flows, order management APIs, and Stripe payment integration.",
     features: [
       "User Authentication",
       "Menu Management",
@@ -508,36 +598,36 @@ export const caseStudyContents: CaseStudyContent[] = [
       },
     ],
     technologies: [
-      "MongoDB",
-      "Express.js",
-      "Node.js",
+      "MongoDB (Hands-on Exposure)",
+      "Express.js (Hands-on Exposure)",
+      "Node.js (Hands-on Exposure)",
       "JavaScript",
       "Stripe",
     ],
     architecture: [
       "React.js frontend with component-based architecture and responsive design",
-      "Node.js and Express.js REST API with MongoDB and Mongoose data models",
+      "Hands-on exposure to Node.js and Express.js REST APIs with MongoDB and Mongoose data models",
       "JWT authentication middleware for protected API routes",
       "Stripe payment integration for checkout workflows",
-      "MongoDB schemas for users, menus, orders, and transactions",
+      "Hands-on exposure to MongoDB schemas for users, menus, orders, and transactions",
     ],
     timeline:
-      "Full-stack development from authentication and menu modules through cart, checkout, and payment integration.",
+      "React frontend development with hands-on backend exposure from authentication and menu modules through cart, checkout, and payment integration.",
     businessImpact: [
       "End-to-end food ordering workflow from menu browse to payment confirmation",
       "Secure authentication and role-based access for users and admins",
       "Scalable API architecture supporting order lifecycle management",
-      "Demonstrates hands-on MERN stack development capabilities",
+      "Demonstrates hands-on exposure to MERN stack development",
     ],
     keyMetrics: [
-      { label: "Stack", value: "MERN" },
+      { label: "Stack", value: "React + MERN Exposure" },
       { label: "Auth", value: "JWT" },
       { label: "Payments", value: "Stripe" },
-      { label: "Database", value: "MongoDB" },
+      { label: "Database", value: "MongoDB Exposure" },
     ],
-    category: "Full Stack",
+    category: "React + Backend Exposure",
     featured: true,
-    featuredOrder: 6,
+    featuredOrder: 7,
   },
 ];
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SITE_URL } from "@/constants/site";
 import { siteConfig } from "@/data/profile";
 
-const title = `${siteConfig.name} | Full Stack MERN Developer`;
+const title = `${siteConfig.name} | Senior React Developer`;
 const description = siteConfig.heroSubheadline;
 
 export const baseMetadata: Metadata = {
@@ -13,13 +13,15 @@ export const baseMetadata: Metadata = {
   },
   description,
   keywords: [
-    "Full Stack MERN Developer",
+    "Senior React Developer",
     "React.js Developer",
     "Next.js Developer",
-    "Node.js Developer",
-    "MongoDB Developer",
-    "MERN Stack Developer",
+    "Frontend Developer",
     "Frontend Engineer",
+    "React Frontend Developer",
+    "Node.js Hands-on Exposure",
+    "Express.js Hands-on Exposure",
+    "MongoDB Hands-on Exposure",
     "ERP Development",
     "SaaS Development",
     "Enterprise Applications",
@@ -40,7 +42,7 @@ export const baseMetadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} - Full Stack MERN Developer`,
+        alt: `${siteConfig.name} - Senior React Developer`,
       },
     ],
   },
@@ -86,8 +88,9 @@ export function generatePersonSchema() {
       "ERP Systems",
       "Next.js",
       "React",
-      "Node.js",
-      "MongoDB",
+      "Node.js hands-on exposure",
+      "Express.js hands-on exposure",
+      "MongoDB hands-on exposure",
     ],
     sameAs: [
       process.env.NEXT_PUBLIC_LINKEDIN,
@@ -100,15 +103,15 @@ export function generateProfessionalServiceSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: `${siteConfig.name} - Full Stack MERN Development`,
+    name: `${siteConfig.name} - Senior React Development`,
     description: siteConfig.heroSubheadline,
     url: SITE_URL,
     areaServed: "Worldwide",
     serviceType: [
-      "Full Stack MERN Development",
       "React.js Development",
       "Next.js Development",
       "ERP Frontend Development",
+      "Frontend Architecture",
       "Web Application Development",
     ],
     provider: {

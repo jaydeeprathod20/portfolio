@@ -16,11 +16,11 @@ export const technologyGroups: TechnologyGroup[] = [
     ],
   },
   {
-    category: "Backend",
+    category: "Backend Exposure",
     items: ["Node.js", "Express.js", "REST APIs", "JWT Authentication"],
   },
   {
-    category: "Database",
+    category: "Database Exposure",
     items: ["MongoDB", "Mongoose"],
   },
   {

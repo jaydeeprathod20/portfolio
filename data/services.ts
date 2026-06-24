@@ -17,11 +17,11 @@ import type { Service } from "@/types";
 export const services: Service[] = [
   {
     id: "saas-development",
-    title: "SaaS Development",
+    title: "SaaS Platform Development",
     description:
-      "Build subscription-ready SaaS products with scalable architecture, role-based access, and billing integrations.",
+      "Experience building subscription-ready SaaS platforms with scalable frontend architecture, role-based access, and billing integrations.",
     benefits: [
-      "Faster time-to-market for MVPs",
+      "Faster delivery for product teams",
       "Architecture designed for growth",
       "Reduced technical debt from day one",
     ],
@@ -125,19 +125,19 @@ export const services: Service[] = [
   },
   {
     id: "mern-stack",
-    title: "MERN Stack Applications",
+    title: "React Applications with Backend Exposure",
     description:
-      "Full-stack JavaScript applications with MongoDB, Express, React, and Node.js.",
+      "Frontend-led React applications with REST API integration and hands-on exposure to Node.js, Express.js, and MongoDB.",
     benefits: [
-      "Single language across stack",
+      "Strong React frontend delivery",
       "Rapid development cycles",
-      "Flexible document-based data",
+      "Practical backend collaboration",
     ],
     deliverables: [
-      "RESTful API development",
-      "MongoDB schema design",
+      "REST API integration",
+      "Backend exposure with Node.js and Express.js",
       "React frontend",
-      "Authentication & authorization",
+      "MongoDB and Mongoose exposure",
     ],
     icon: Server,
   },

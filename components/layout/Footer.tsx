@@ -119,7 +119,7 @@ export function Footer() {
             © {currentYear} {siteConfig.name}. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Full Stack MERN · React.js · Next.js · Node.js · MongoDB
+            Senior React Developer · React.js · Next.js · Frontend Architecture
           </p>
         </div>
       </div>

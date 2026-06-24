@@ -2,39 +2,39 @@ import type { FAQItem } from "@/types";
 
 export const faqItems: FAQItem[] = [
   {
-    id: "cost",
-    question: "How much does a project cost?",
+    id: "role",
+    question: "What roles are you currently looking for?",
     answer:
-      "Project costs depend on scope, complexity, and timeline. A focused MVP typically starts from $5,000, while enterprise ERP or logistics platforms range from $15,000 to $50,000+. I provide detailed estimates after a discovery call to understand your specific requirements.",
+      "I am looking for Senior React Developer, React.js Developer, Next.js Developer, and Frontend Engineer opportunities where I can build scalable business applications and take ownership of frontend architecture.",
   },
   {
-    id: "saas",
-    question: "Can you build SaaS products?",
+    id: "experience",
+    question: "What kind of product experience do you have?",
     answer:
-      "Yes. I specialize in building SaaS products with multi-tenant architecture, subscription billing via Stripe, role-based access, admin dashboards, and scalable infrastructure designed for growth.",
+      "I have 3+ years of experience building enterprise SaaS platforms, ERP systems, logistics applications, procurement workflows, healthcare marketplaces, admin dashboards, and outdoor media management platforms.",
   },
   {
-    id: "maintenance",
-    question: "Can you maintain existing applications?",
+    id: "tech-stack",
+    question: "What is your primary tech stack?",
     answer:
-      "Absolutely. I work with existing codebases — fixing bugs, adding features, optimizing performance, and modernizing legacy applications to current technology standards.",
+      "My primary expertise is React.js, Next.js, JavaScript, Redux Toolkit, REST API integration, Ant Design, responsive UI development, and frontend architecture, with hands-on exposure to Node.js, Express.js, and MongoDB.",
   },
   {
-    id: "international",
-    question: "Do you work with international clients?",
+    id: "work-style",
+    question: "Can you work with backend and product teams?",
     answer:
-      "Yes. I work with clients globally including Australia, UK, Singapore, and the US. Communication is handled via video calls, Slack, and email with flexible timezone coordination.",
+      "Yes. I have worked closely with backend, QA, design, and product teams to integrate REST APIs, translate business workflows into frontend modules, and deliver production-ready features.",
   },
   {
-    id: "support",
-    question: "Do you provide support after launch?",
+    id: "availability",
+    question: "Are you open to remote or hybrid roles?",
     answer:
-      "Yes. I offer post-launch support packages including bug fixes, performance monitoring, feature updates, and ongoing maintenance to keep your application running smoothly.",
+      "Yes. I am open to Senior React Developer opportunities based in Ahmedabad, remote roles, and suitable hybrid opportunities depending on the company, team, and role expectations.",
   },
   {
-    id: "erp-crm",
-    question: "Can you build ERP and CRM systems?",
+    id: "leadership",
+    question: "Do you have leadership experience?",
     answer:
-      "ERP and CRM systems are a core specialty. I have built manufacturing ERPs, logistics platforms, procurement systems, and custom CRM solutions for businesses across multiple industries.",
+      "Yes. I have led frontend work on production applications, contributed to scalable React architecture, guided feature implementation, and coordinated with teams across complex enterprise modules.",
   },
 ];
