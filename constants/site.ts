@@ -5,6 +5,10 @@ export const RESUME_PATH = "/resume/jaydeep_rathod_resume.pdf";
 export const PROFILE_IMAGE = "/images/profile-react.png";
 
 const DEFAULT_EMAIL = "jaydeepraj2001@gmail.com";
+const DEFAULT_PHONE = "7041041197";
+const DEFAULT_WHATSAPP = "https://wa.me/7041041197";
+const DEFAULT_LINKEDIN = "https://www.linkedin.com/in/jaydeep-rathod-it19/";
+const DEFAULT_GITHUB = "https://github.com/jaydeeprathod20";
 
 const getWhatsAppLink = (value: string) => {
   const trimmedValue = value.trim();
@@ -24,12 +28,14 @@ const getWhatsAppLink = (value: string) => {
 
 export const SOCIAL_LINKS = {
   email: process.env.NEXT_PUBLIC_EMAIL ?? DEFAULT_EMAIL,
-  phone: process.env.NEXT_PUBLIC_PHONE ?? "",
+  phone: process.env.NEXT_PUBLIC_PHONE ?? DEFAULT_PHONE,
   whatsapp: getWhatsAppLink(
-    process.env.NEXT_PUBLIC_WHATSAPP ?? process.env.NEXT_PUBLIC_PHONE ?? ""
+    process.env.NEXT_PUBLIC_WHATSAPP ??
+      process.env.NEXT_PUBLIC_PHONE ??
+      DEFAULT_WHATSAPP
   ),
-  linkedin: process.env.NEXT_PUBLIC_LINKEDIN ?? "",
-  github: process.env.NEXT_PUBLIC_GITHUB ?? "",
+  linkedin: process.env.NEXT_PUBLIC_LINKEDIN ?? DEFAULT_LINKEDIN,
+  github: process.env.NEXT_PUBLIC_GITHUB ?? DEFAULT_GITHUB,
 } as const;
 
 export const GMAIL_COMPOSE_URL = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(

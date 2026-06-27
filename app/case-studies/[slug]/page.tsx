@@ -61,15 +61,16 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       <Header />
       <main className="pt-20">
         <Section containerClassName="max-w-5xl">
-          <Link
-            href="/#case-studies"
-            className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to Case Studies
-          </Link>
-
-          <Badge className="mb-4">{study.category}</Badge>
+          <div className="mb-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <Link
+              href="/#case-studies"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back to Case Studies
+            </Link>
+            <Badge>{study.category}</Badge>
+          </div>
           <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
             {study.title}
           </h1>

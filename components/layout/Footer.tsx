@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, MessageCircle } from "lucide-react";
 import { GitHubIcon, LinkedInIcon } from "@/components/ui/SocialIcons";
 import { FOOTER_LINKS } from "@/constants/navigation";
 import { GMAIL_COMPOSE_URL, SOCIAL_LINKS } from "@/constants/site";
@@ -56,6 +56,17 @@ export function Footer() {
                   aria-label="Email"
                 >
                   <Mail className="h-4 w-4" />
+                </a>
+              )}
+              {SOCIAL_LINKS.whatsapp && (
+                <a
+                  href={SOCIAL_LINKS.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
+                  aria-label="WhatsApp"
+                >
+                  <MessageCircle className="h-4 w-4" />
                 </a>
               )}
             </div>

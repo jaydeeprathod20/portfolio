@@ -1,8 +1,10 @@
 "use client";
 
+import type { MouseEvent } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { scrollToHash } from "@/components/layout/SectionHashScroll";
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -34,8 +36,9 @@ export function Button({
     primary:
       "bg-indigo-600 text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-500 hover:shadow-indigo-500/40",
     secondary:
-      "border border-white/20 bg-white/5 text-foreground backdrop-blur-sm hover:bg-white/10 hover:border-white/30",
-    ghost: "text-muted-foreground hover:text-foreground hover:bg-white/5",
+      "border border-black/10 bg-white/70 text-foreground shadow-sm backdrop-blur-sm hover:border-indigo-500/30 hover:bg-white dark:border-white/20 dark:bg-white/5 dark:hover:border-white/30 dark:hover:bg-white/10",
+    ghost:
+      "text-muted-foreground hover:bg-black/5 hover:text-foreground dark:hover:bg-white/5",
   };
 
   const sizes = {
@@ -45,6 +48,31 @@ export function Button({
   };
 
   const classes = cn(baseStyles, variants[variant], sizes[size], className);
+  const handleHashLinkClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    onClick?.();
+
+    if (!href?.includes("#")) {
+      return;
+    }
+
+    const url = new URL(href, window.location.href);
+
+    if (url.pathname === window.location.pathname && url.hash) {
+      if (
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        event.button !== 0
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+      window.history.pushState(null, "", `${url.pathname}${url.hash}`);
+      scrollToHash(url.hash);
+    }
+  };
 
   if (href) {
     const shouldOpenNewTab =
@@ -66,7 +94,12 @@ export function Button({
     }
     return (
       <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-        <Link href={href} className={classes}>
+        <Link
+          href={href}
+          scroll={!href.includes("#")}
+          className={classes}
+          onClick={handleHashLinkClick}
+        >
           {children}
         </Link>
       </motion.div>

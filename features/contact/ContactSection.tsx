@@ -5,8 +5,8 @@ import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import emailjs from "emailjs-com";
-import { Input, Select, message } from "antd";
-import { Mail, MessageCircle, Send, Loader2 } from "lucide-react";
+import { Input, message } from "antd";
+import { ChevronDown, Mail, MessageCircle, Send, Loader2 } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -267,19 +267,32 @@ export function ContactSection() {
                   name="budget"
                   control={control}
                   render={({ field }) => (
-                    <Select
-                      value={field.value || undefined}
-                      onChange={field.onChange}
-                      onBlur={field.onBlur}
-                      placeholder="Select role type"
-                      size="large"
-                      className="w-full"
-                      options={BUDGET_OPTIONS.map((opt) => ({
-                        label: opt.label,
-                        value: opt.value,
-                      }))}
-                      status={errors.budget ? "error" : undefined}
-                    />
+                    <div className="relative">
+                      <select
+                        value={field.value || ""}
+                        onChange={(event) => field.onChange(event.target.value)}
+                        onBlur={field.onBlur}
+                        className={`h-11 w-full appearance-none rounded-lg border border-black/10 bg-white/90 px-3 pr-10 text-base shadow-sm outline-none transition-colors hover:border-indigo-500/35 focus:border-indigo-500/65 focus:ring-4 focus:ring-indigo-500/15 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:border-white/20 dark:focus:border-indigo-400/60 ${
+                          field.value
+                            ? "text-foreground dark:text-foreground"
+                            : "text-slate-400 dark:text-slate-400"
+                        }`}
+                      >
+                        <option value="" className="bg-white text-slate-500 dark:bg-slate-900 dark:text-slate-400">
+                          Select role type
+                        </option>
+                        {BUDGET_OPTIONS.map((opt) => (
+                          <option
+                            key={opt.value}
+                            value={opt.value}
+                            className="bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100"
+                          >
+                            {opt.label}
+                          </option>
+                        ))}
+                      </select>
+                      <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400 dark:text-slate-400" />
+                    </div>
                   )}
                 />
                 {errors.budget && (

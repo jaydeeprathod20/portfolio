@@ -3,7 +3,7 @@ import { RESUME_PATH } from "@/constants/site";
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "About", href: "/#about" },
-  { label: "Services", href: "/#services" },
+  { label: "Expertise", href: "/#services" },
   { label: "Case Studies", href: "/#case-studies" },
   { label: "Process", href: "/#process" },
   { label: "Contact", href: "/#contact" },

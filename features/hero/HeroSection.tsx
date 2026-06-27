@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/data/profile";
 import { RESUME_PATH } from "@/constants/site";
 import { fadeInUp, defaultTransition } from "@/lib/animations";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 const trustIndicators = [
   { icon: Award, label: "Professional Experience", value: "3+ Years Experience" },
@@ -26,6 +27,13 @@ const trustIndicators = [
 
 export function HeroSection() {
   const [profileImageError, setProfileImageError] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const profileImage =
+    resolvedTheme === "light" ? "/images/light-mode.png" : siteConfig.profileImage;
+
+  useEffect(() => {
+    setProfileImageError(false);
+  }, [profileImage]);
 
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden pt-20">
@@ -138,7 +146,7 @@ export function HeroSection() {
               <div className="relative aspect-[3/2] w-full overflow-hidden">
                 {!profileImageError ? (
                   <Image
-                    src={siteConfig.profileImage}
+                    src={profileImage}
                     alt={siteConfig.name}
                     fill
                     className="object-cover object-center"
