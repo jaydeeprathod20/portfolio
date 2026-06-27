@@ -29,7 +29,7 @@ export function FAQSection() {
         <Collapse
           items={items}
           bordered={false}
-          expandIconPosition="end"
+          expandIconPlacement="end"
           className="faq-collapse bg-transparent"
         />
       </FadeIn>

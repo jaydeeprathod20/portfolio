@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Mail, MapPin } from "lucide-react";
 import { GitHubIcon, LinkedInIcon } from "@/components/ui/SocialIcons";
 import { FOOTER_LINKS } from "@/constants/navigation";
-import { SOCIAL_LINKS } from "@/constants/site";
+import { GMAIL_COMPOSE_URL, SOCIAL_LINKS } from "@/constants/site";
 import { siteConfig } from "@/data/profile";
 
 export function Footer() {
@@ -49,7 +49,9 @@ export function Footer() {
               )}
               {SOCIAL_LINKS.email && (
                 <a
-                  href={`mailto:${SOCIAL_LINKS.email}`}
+                  href={GMAIL_COMPOSE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
                   aria-label="Email"
                 >
@@ -79,7 +81,7 @@ export function Footer() {
 
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
-              Services
+              Expertise
             </h3>
             <ul className="space-y-3">
               {FOOTER_LINKS.services.map((link) => (
@@ -97,7 +99,7 @@ export function Footer() {
 
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
-              Resources
+              For Recruiters
             </h3>
             <ul className="space-y-3">
               {FOOTER_LINKS.resources.map((link) => (

@@ -47,12 +47,15 @@ export function Button({
   const classes = cn(baseStyles, variants[variant], sizes[size], className);
 
   if (href) {
+    const shouldOpenNewTab =
+      external && !href.startsWith("mailto:") && !href.startsWith("tel:");
+
     if (external) {
       return (
         <motion.a
           href={href}
-          target="_blank"
-          rel="noopener noreferrer"
+          target={shouldOpenNewTab ? "_blank" : undefined}
+          rel={shouldOpenNewTab ? "noopener noreferrer" : undefined}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           className={classes}

@@ -4,7 +4,7 @@ import React from "react";
 import { useServerInsertedHTML } from "next/navigation";
 import { StyleProvider, createCache, extractStyle } from "@ant-design/cssinjs";
 import { ConfigProvider, theme } from "antd";
-import { useTheme } from "next-themes";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 export function AntdProvider({ children }: { children: React.ReactNode }) {
   const cache = React.useMemo(() => createCache(), []);

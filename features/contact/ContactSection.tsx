@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import emailjs from "emailjs-com";
@@ -12,33 +12,71 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { BUDGET_OPTIONS, EMAILJS_CONFIG, SOCIAL_LINKS } from "@/constants/site";
+import {
+  BUDGET_OPTIONS,
+  EMAILJS_CONFIG,
+  FORMSUBMIT_ENDPOINT,
+  GMAIL_COMPOSE_URL,
+  SOCIAL_LINKS,
+} from "@/constants/site";
 
 const contactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email"),
-  company: z.string().optional(),
-  budget: z.string().min(1, "Please select an opportunity type"),
-  projectDetails: z
+  name: z.string().optional(),
+  email: z
     .string()
-    .min(20, "Please provide at least 20 characters about the role"),
+    .trim()
+    .min(1, "Email is required")
+    .email("Please enter a valid email address"),
+  company: z.string().optional(),
+  budget: z.string().optional(),
+  projectDetails: z.string().optional(),
 });
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 const { TextArea } = Input;
 
+const sendWithFormSubmit = async (data: ContactFormValues) => {
+  const subject = data.name
+    ? `React.js Role Opportunity from ${data.name}`
+    : "React.js Role Opportunity";
+
+  const response = await fetch(FORMSUBMIT_ENDPOINT, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      _subject: subject,
+      _template: "table",
+      _captcha: "false",
+      name: data.name || "N/A",
+      email: data.email,
+      company: data.company || "N/A",
+      opportunity_type: data.budget || "N/A",
+      role_details: data.projectDetails || "N/A",
+      _replyto: data.email,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error("FormSubmit request failed");
+  }
+};
+
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [messageApi, contextHolder] = message.useMessage();
 
   const {
-    register,
+    control,
     handleSubmit,
-    setValue,
     reset,
     formState: { errors },
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
+    mode: "onChange",
     defaultValues: {
       name: "",
       email: "",
@@ -70,19 +108,15 @@ export function ContactSection() {
           },
           EMAILJS_CONFIG.publicKey
         );
-        message.success("Message sent successfully! I'll get back to you soon.");
+        messageApi.success("Message sent successfully! I'll get back to you soon.");
       } else {
-        const mailtoLink = `mailto:${SOCIAL_LINKS.email}?subject=React.js Role Opportunity from ${encodeURIComponent(data.name)}&body=${encodeURIComponent(
-          `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || "N/A"}\nOpportunity Type: ${data.budget}\n\nRole Details:\n${data.projectDetails}`
-        )}`;
-        const anchor = document.createElement("a");
-        anchor.href = mailtoLink;
-        anchor.click();
-        message.info("Opening your email client to send the inquiry.");
+        await sendWithFormSubmit(data);
+        messageApi.success("Message sent successfully! Please check your inbox.");
       }
       reset();
-    } catch {
-      message.error("Failed to send message. Please try email or WhatsApp.");
+    } catch (error) {
+      console.error(error);
+      messageApi.error("Failed to send message. Please try WhatsApp or email directly.");
     } finally {
       setIsSubmitting(false);
     }
@@ -90,6 +124,7 @@ export function ContactSection() {
 
   return (
     <Section id="contact">
+      {contextHolder}
       <SectionHeader
         label="Contact"
         title="Let's Discuss a Senior React Developer Role"
@@ -106,7 +141,9 @@ export function ContactSection() {
               <div className="space-y-4">
                 {SOCIAL_LINKS.email && (
                   <a
-                    href={`mailto:${SOCIAL_LINKS.email}`}
+                    href={GMAIL_COMPOSE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-3 text-muted-foreground transition-colors hover:text-foreground"
                   >
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-500/10">
@@ -146,7 +183,7 @@ export function ContactSection() {
               )}
               {SOCIAL_LINKS.email && (
                 <Button
-                  href={`mailto:${SOCIAL_LINKS.email}`}
+                  href={GMAIL_COMPOSE_URL}
                   variant="secondary"
                   external
                   className="w-full"
@@ -164,13 +201,19 @@ export function ContactSection() {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-foreground">
-                  Name *
+                  Name
                 </label>
-                <Input
-                  {...register("name")}
-                  placeholder="Your full name"
-                  size="large"
-                  status={errors.name ? "error" : undefined}
+                <Controller
+                  name="name"
+                  control={control}
+                  render={({ field }) => (
+                    <Input
+                      {...field}
+                      placeholder="Your full name"
+                      size="large"
+                      status={errors.name ? "error" : undefined}
+                    />
+                  )}
                 />
                 {errors.name && (
                   <p className="mt-1 text-sm text-red-400">{errors.name.message}</p>
@@ -181,12 +224,18 @@ export function ContactSection() {
                 <label className="mb-1.5 block text-sm font-medium text-foreground">
                   Email *
                 </label>
-                <Input
-                  {...register("email")}
-                  type="email"
-                  placeholder="you@company.com"
-                  size="large"
-                  status={errors.email ? "error" : undefined}
+                <Controller
+                  name="email"
+                  control={control}
+                  render={({ field }) => (
+                    <Input
+                      {...field}
+                      type="email"
+                      placeholder="you@company.com"
+                      size="large"
+                      status={errors.email ? "error" : undefined}
+                    />
+                  )}
                 />
                 {errors.email && (
                   <p className="mt-1 text-sm text-red-400">{errors.email.message}</p>
@@ -197,27 +246,41 @@ export function ContactSection() {
                 <label className="mb-1.5 block text-sm font-medium text-foreground">
                   Company
                 </label>
-                <Input
-                  {...register("company")}
-                  placeholder="Your company name"
-                  size="large"
+                <Controller
+                  name="company"
+                  control={control}
+                  render={({ field }) => (
+                    <Input
+                      {...field}
+                      placeholder="Your company name"
+                      size="large"
+                    />
+                  )}
                 />
               </div>
 
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-foreground">
-                  Opportunity Type *
+                  Opportunity Type
                 </label>
-                <Select
-                  placeholder="Select role type"
-                  size="large"
-                  className="w-full"
-                  options={BUDGET_OPTIONS.map((opt) => ({
-                    label: opt.label,
-                    value: opt.value,
-                  }))}
-                  onChange={(value) => setValue("budget", value)}
-                  status={errors.budget ? "error" : undefined}
+                <Controller
+                  name="budget"
+                  control={control}
+                  render={({ field }) => (
+                    <Select
+                      value={field.value || undefined}
+                      onChange={field.onChange}
+                      onBlur={field.onBlur}
+                      placeholder="Select role type"
+                      size="large"
+                      className="w-full"
+                      options={BUDGET_OPTIONS.map((opt) => ({
+                        label: opt.label,
+                        value: opt.value,
+                      }))}
+                      status={errors.budget ? "error" : undefined}
+                    />
+                  )}
                 />
                 {errors.budget && (
                   <p className="mt-1 text-sm text-red-400">{errors.budget.message}</p>
@@ -226,13 +289,19 @@ export function ContactSection() {
 
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-foreground">
-                  Role Details *
+                  Role Details
                 </label>
-                <TextArea
-                  {...register("projectDetails")}
-                  placeholder="Tell me about the React.js role, responsibilities, tech stack, location/remote setup, and timeline..."
-                  rows={5}
-                  status={errors.projectDetails ? "error" : undefined}
+                <Controller
+                  name="projectDetails"
+                  control={control}
+                  render={({ field }) => (
+                    <TextArea
+                      {...field}
+                      placeholder="Tell me about the React.js role, responsibilities, tech stack, location/remote setup, and timeline..."
+                      rows={5}
+                      status={errors.projectDetails ? "error" : undefined}
+                    />
+                  )}
                 />
                 {errors.projectDetails && (
                   <p className="mt-1 text-sm text-red-400">

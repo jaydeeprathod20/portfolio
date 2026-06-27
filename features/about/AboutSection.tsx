@@ -1,14 +1,25 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import aboutImage from "@/public/images/about.png";
+import aboutImage2 from "@/public/images/about_2.png";
 import { Briefcase, MapPin, Users } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { GlassCard } from "@/components/ui/GlassCard";
 import { Badge } from "@/components/ui/Badge";
 import { siteConfig } from "@/data/profile";
+
+const ABOUT_IMAGES = [
+  {
+    src: aboutImage,
+    alt: `${siteConfig.name} speaking at Indus University`,
+  },
+  {
+    src: aboutImage2,
+    alt: `${siteConfig.name} working at a desk`,
+  },
+];
 
 export function AboutSection() {
   return (
@@ -21,23 +32,16 @@ export function AboutSection() {
 
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <FadeIn>
-          <div className="relative mx-auto max-w-md lg:max-w-none">
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-violet-500/10 blur-xl"
-            />
-            <GlassCard hover={false} className="relative overflow-hidden p-0">
-              <div className="relative aspect-[3/2] w-full overflow-hidden bg-[#0a1628]">
-                <Image
-                  src={siteConfig.profileImage}
-                  alt={siteConfig.name}
-                  fill
-                  className="object-contain object-center"
-                  sizes="(max-width: 768px) 100vw, 560px"
-                />
-              </div>
-            </GlassCard>
+          <div className="mx-auto flex w-full max-w-[18rem] flex-col items-center gap-5 lg:max-w-[20rem]">
+            {ABOUT_IMAGES.map((image) => (
+              <Image
+                key={image.alt}
+                src={image.src}
+                alt={image.alt}
+                className="h-auto w-full object-contain"
+                sizes="(max-width: 640px) 18rem, (max-width: 1024px) 18rem, 20rem"
+              />
+            ))}
           </div>
         </FadeIn>
 
