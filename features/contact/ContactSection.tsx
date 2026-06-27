@@ -5,8 +5,14 @@ import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import emailjs from "emailjs-com";
-import { Input, message } from "antd";
-import { ChevronDown, Mail, MessageCircle, Send, Loader2 } from "lucide-react";
+import { Input, notification } from "antd";
+import {
+  ChevronDown,
+  Mail,
+  MessageCircle,
+  Send,
+  Loader2,
+} from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -35,6 +41,27 @@ const contactSchema = z.object({
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 const { TextArea } = Input;
+const successNotificationContent = (
+  <div>
+    <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+      Message sent successfully!
+    </p>
+    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+      I'll get back to you soon.
+    </p>
+  </div>
+);
+
+const errorNotificationContent = (
+  <div>
+    <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+      Failed to send message
+    </p>
+    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+      Please try WhatsApp or email directly.
+    </p>
+  </div>
+);
 
 const sendWithFormSubmit = async (data: ContactFormValues) => {
   const subject = data.name
@@ -67,7 +94,8 @@ const sendWithFormSubmit = async (data: ContactFormValues) => {
 
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [messageApi, contextHolder] = message.useMessage();
+  const [notificationApi, notificationContextHolder] =
+    notification.useNotification();
 
   const {
     control,
@@ -108,15 +136,30 @@ export function ContactSection() {
           },
           EMAILJS_CONFIG.publicKey
         );
-        messageApi.success("Message sent successfully! I'll get back to you soon.");
+        notificationApi.success({
+          title: successNotificationContent,
+          placement: "top",
+          duration: 4,
+          className: "contact-notification",
+        });
       } else {
         await sendWithFormSubmit(data);
-        messageApi.success("Message sent successfully! Please check your inbox.");
+        notificationApi.success({
+          title: successNotificationContent,
+          placement: "top",
+          duration: 4,
+          className: "contact-notification",
+        });
       }
       reset();
     } catch (error) {
       console.error(error);
-      messageApi.error("Failed to send message. Please try WhatsApp or email directly.");
+      notificationApi.error({
+        title: errorNotificationContent,
+        placement: "top",
+        duration: 4,
+        className: "contact-notification",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -124,7 +167,7 @@ export function ContactSection() {
 
   return (
     <Section id="contact">
-      {contextHolder}
+      {notificationContextHolder}
       <SectionHeader
         label="Contact"
         title="Let's Discuss a Senior React Developer Role"

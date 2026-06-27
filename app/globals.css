@@ -203,7 +203,39 @@ html:not(.dark) .contact-role-select .ant-select-arrow {
   background: rgba(99, 102, 241, 0.2) !important;
 }
 
-.dark .ant-message-notice-content {
-  background: var(--card) !important;
+.contact-notification.ant-notification-notice {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid rgba(15, 23, 42, 0.1) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14) !important;
+  backdrop-filter: blur(12px);
+}
+
+.contact-notification .ant-notification-notice-message,
+.contact-notification .ant-notification-notice-title {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+  margin-bottom: 0 !important;
+}
+
+.contact-notification .ant-notification-notice-description,
+.contact-notification .ant-notification-notice-close {
+  color: #475569 !important;
+}
+
+.dark .contact-notification.ant-notification-notice {
+  background: rgba(15, 23, 42, 0.96) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35) !important;
+}
+
+.dark .contact-notification .ant-notification-notice-message,
+.dark .contact-notification .ant-notification-notice-title {
   color: var(--foreground) !important;
 }
+
+.dark .contact-notification .ant-notification-notice-description,
+.dark .contact-notification .ant-notification-notice-close {
+  color: var(--muted-foreground) !important;
+}
+
